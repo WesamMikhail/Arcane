@@ -13,7 +13,7 @@ use Pimple\Container;
 
 $container = new Container();
 $container["configs"]       = function($self){ return new Configs("./configs.json"); };
-$container["logger"]        = function($self){ return new Logger(new LoggerFileStorage("logs")); };
+$container["logger"]        = function($self){ return new Logger(new LoggerFileStorage("logs.log")); };
 $container["request"]       = function($self){ return Request::parseFromGlobals(); };
 $container["response"]      = function($self){ return new JSONResponse(); };
 $container["DBContainer"]   = function($self){ return new ConnectionContainer(); };
