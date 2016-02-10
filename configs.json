@@ -1,0 +1,32 @@
+{
+  "globals" : {
+    "application_name" : "test",
+    "application_version" : "0.1",
+    "application_issue" : "1",
+    "environment" : "production",
+    "db_connections" : {
+      "backoffice" : {
+        "driver" : "mysql",
+        "host" : "localhost",
+        "user" : "root",
+        "password" : "",
+        "database" : "bo"
+      }
+    }
+  },
+  "routes" : [
+    {
+      "path"  : "/user/:",
+      "method": "GET",
+      "procedure": "\\Project\\Procedures\\UserProcedures@get",
+      "properties" : {
+
+      }
+    },
+    {
+      "path"  : "/users/:",
+      "method": "GET",
+      "procedure": "\\Project\\Procedures\\UserProcedures@get"
+    }
+  ]
+}

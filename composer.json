@@ -1,0 +1,24 @@
+{
+  "name": "lorenum/arcane",
+  "description" : "A Task-Based Framework for PHP",
+  "keywords": ["micro", "framework", "REST", "services", "php", "task", "middleware"],
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Wesam Mikhail",
+      "email": "wesam@lorenum.com",
+      "homepage" : "https://github.com/WesamMikhail"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lorenum\\Arcane\\" : "src/",
+      "Project\\" : "example/"
+    }
+  },
+  "require": {
+    "php": ">=5.5.0",
+    "pimple/pimple" : "~3.0"
+  }
+}
