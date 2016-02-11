@@ -14,7 +14,7 @@
   "autoload": {
     "psr-4": {
       "Lorenum\\Arcane\\" : "src/",
-      "Project\\" : "example/"
+      "Example\\" : "example/"
     }
   },
   "require": {

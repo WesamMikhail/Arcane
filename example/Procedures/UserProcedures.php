@@ -1,5 +1,5 @@
 <?php
-namespace Project\Procedures;
+namespace Example\Procedures;
 
 use Lorenum\Arcane\Planner\Tasks\ProcedureRunnerTask\AbstractProcedure;
 
