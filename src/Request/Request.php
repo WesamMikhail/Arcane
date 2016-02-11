@@ -265,7 +265,7 @@ class Request{
         $request->setMethod(strtoupper($_SERVER["REQUEST_METHOD"]));
         $request->setDomain($_SERVER["HTTP_HOST"]);
         $request->setQuery($_GET);
-        $request->setProtocol($_SERVER['SERVER_PROTOCOL']); //TODO change to a more reliable method for determining HTTPs
+        $request->setProtocol($_SERVER['SERVER_PROTOCOL']);
 
         //Get the IP - Guess at best
         if (!empty($_SERVER['HTTP_CLIENT_IP']))
