@@ -27,6 +27,7 @@ class Request{
     protected $query = [];
     protected $body = [];
     protected $headers = [];
+    protected $session;
 
 
     /**
@@ -207,6 +208,22 @@ class Request{
     public function setPath($path) {
         $this->path = $path;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSession() {
+        return $this->session;
+    }
+
+    /**
+     * @param mixed $session
+     */
+    public function setSession($session) {
+        $this->session = $session;
+    }
+
+
 
 
     public static function getGlobalHeaders(){
