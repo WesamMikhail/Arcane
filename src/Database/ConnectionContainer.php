@@ -26,7 +26,7 @@ class ConnectionContainer{
         $db = new PDO("$driver:dbname=$db;host=$host", $user, $password);
 
         if(!isset($options[PDO::ATTR_DEFAULT_FETCH_MODE]))
-            $options[PDO::ATTR_DEFAULT_FETCH_MODE] = PDO::FETCH_ASSOC;
+            $options[PDO::ATTR_DEFAULT_FETCH_MODE] = PDO::FETCH_OBJ;
 
         foreach($options as $key => $val){
             $db->setAttribute($key, $val);
