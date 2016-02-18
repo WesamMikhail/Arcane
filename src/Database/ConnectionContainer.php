@@ -23,7 +23,7 @@ class ConnectionContainer{
     }
 
     public static function createConnection($driver, $host, $db, $user, $password, array $options = []){
-        $db = new PDO("$driver:dbname=$db;host=$host", $user, $password);
+        $db = new PDO("$driver:dbname=$db;host=$host;charset=utf8", $user, $password);
 
         if(!isset($options[PDO::ATTR_DEFAULT_FETCH_MODE]))
             $options[PDO::ATTR_DEFAULT_FETCH_MODE] = PDO::FETCH_OBJ;
