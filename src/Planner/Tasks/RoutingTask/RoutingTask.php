@@ -38,8 +38,10 @@ class RoutingTask implements TaskInterface{
 
         $route = $map->match($container["request"]->getMethod(), $container["request"]->getUri());
 
-        if($route instanceof Route)
+        if($route instanceof Route) {
             $container["route"] = $route;
+            $container["request"]->setParams($route->getParams());
+        }
         else if($route === true)
             throw new HTTPException_405;
         else

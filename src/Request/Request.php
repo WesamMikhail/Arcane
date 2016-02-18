@@ -24,10 +24,19 @@ class Request{
     protected $uri;
     protected $script;
     protected $ip;
+    protected $params = [];
     protected $query = [];
     protected $body = [];
     protected $headers = [];
     protected $session;
+
+
+    public function param($position){
+        if(isset($this->params[$position]))
+            return $this->params[$position];
+
+        return null;
+    }
 
 
     /**
@@ -222,6 +231,22 @@ class Request{
     public function setSession($session) {
         $this->session = $session;
     }
+
+    /**
+     * @return array
+     */
+    public function getParams() {
+        return $this->params;
+    }
+
+    /**
+     * @param array $params
+     */
+    public function setParams($params) {
+        $this->params = $params;
+    }
+
+
 
 
 
