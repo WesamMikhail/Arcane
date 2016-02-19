@@ -33,7 +33,7 @@ class Request{
 
     public function param($position){
         if(isset($this->params[$position]))
-            return $this->params[$position];
+            return trim($this->params[$position]);
 
         return null;
     }
@@ -47,7 +47,7 @@ class Request{
      */
     public function query($key){
         if(isset($this->query[$key]))
-            return $this->query[$key];
+            return trim($this->query[$key]);
 
         return null;
     }
@@ -60,7 +60,7 @@ class Request{
      */
     public function body($key){
         if(isset($this->body[$key]))
-            return $this->body[$key];
+            return trim($this->body[$key]);
 
         return null;
     }
