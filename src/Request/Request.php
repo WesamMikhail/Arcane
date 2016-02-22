@@ -296,7 +296,7 @@ class Request{
 
         //Disallow empty URI fragments such as: /user//profile. In other words, two backslashes cannot follow each other
         foreach($uri as $fragment){
-            if(empty($fragment))
+            if(empty($fragment) && ($fragment != 0))
                 throw new HTTPException_400;
         }
 
